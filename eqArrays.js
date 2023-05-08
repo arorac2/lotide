@@ -19,8 +19,11 @@ const assertEqual = function(actual, expected) {
     return true;
   }
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // should pass
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // should pass
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // should pass
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // should pass
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true); // => should fail
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // should pass
+// assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // should pass
+// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // should pass
+// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // should pass
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true); // => should fail
+
+
+module.exports = eqArrays;

@@ -33,3 +33,4 @@ assertEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
 
 
 
+module.exports = tail;
