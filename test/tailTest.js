@@ -1,5 +1,21 @@
-const tail = require('../tail');
+const assert = require('chai').assert;
+const tail   = require('../tail');
 const assertEqual = require('../assertEqual');
 
-assertEqual(tail([5,6,7]), [6,7]);
-assertEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+describe("#tail", () => {
+    it("returns [6, 7] for [5, 6, 7]", () => {
+      const expected = [6, 7];
+      const actual = tail([5, 6, 7]);
+      for (let i = 0; i < expected.length; i++) {
+        assertEqual(actual[i], expected[i]);
+      }
+    });
+  
+    it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+      const expected = ["Lighthouse", "Labs"];
+      const actual = tail(["Hello", "Lighthouse", "Labs"]);
+      for (let i = 0; i < expected.length; i++) {
+        assertEqual(actual[i], expected[i]);
+      }
+    });
+  });
