@@ -1,9 +1,13 @@
 {
+  "name": "@arorac/lotide",
+  "author": "Chaahat ",
+  "version": "1.0.1",
+
   "devDependencies": {
     "chai": "^4.3.7",
     "mocha": "^9.2.2"
   },
-  
+
   "scripts": {
     "test": "mocha"
   }
